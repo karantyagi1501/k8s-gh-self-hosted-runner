@@ -11,3 +11,4 @@ jobs:
 
       - name: Run a container
         run: docker run --rm hello-world
+
