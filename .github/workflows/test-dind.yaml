@@ -1,0 +1,13 @@
+name: Test dind runner
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: dind  # matches your helm release name
+    steps:
+      - name: Verify Docker is available
+        run: docker info
+
+      - name: Run a container
+        run: docker run --rm hello-world
